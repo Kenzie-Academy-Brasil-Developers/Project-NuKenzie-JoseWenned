@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form"
 import { Button } from "../../fragments/Button"
 import { useContext } from "react"
 import { TodoContext } from "../../providers"
+import style from "./style.module.scss"
 
 export const FormRegister = () => {
 
@@ -11,14 +12,17 @@ export const FormRegister = () => {
     const { AddExpense, setValueSelect } = useContext(TodoContext)
 
     const submit = (formData) => {
-        console.log(formData)
+        
         AddExpense(formData)
         setValueSelect(formData.value)
         reset()
+        
     }
 
     return(
-        <form onSubmit={handleSubmit(submit)}>
+        <form className={style.containerForm} onSubmit={handleSubmit(submit)}>
+
+        
             <Input 
                 label= "Description" 
                 type= "name"
@@ -26,7 +30,9 @@ export const FormRegister = () => {
                 required
                 {...register("name")}
             />
- 
+            <p className={style.paragraph}>Ex: buy clothes</p>
+            
+           
             <Input 
                 label= "Value ($)"
                 type= "number"
@@ -34,14 +40,15 @@ export const FormRegister = () => {
                 required
                 {...register("price")}
             />
-
-            <select {...register("value")} required>
+        
+            <label className={style.titleLabelSelect} htmlFor="value">Type Value</label>
+            <select className={style.select} {...register("value")} id="value" required>
                 <option value="">Select type</option>
                 <option value="Prohibted">Prohibted</option>
                 <option value="Exit">Exit</option>
             </select>
 
-            <Button type="submit" text="Enter expense"/>
+            <Button className={style.buttonEnter} type="submit" text="Enter expense"/>
         </form>
     )
 }

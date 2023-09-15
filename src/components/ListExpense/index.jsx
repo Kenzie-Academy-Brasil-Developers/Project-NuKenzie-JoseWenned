@@ -1,6 +1,7 @@
 import { CardExpense } from "./CardExpense"
 import { TodoContext } from "../../providers"
 import { useContext } from "react"
+import style from "./style.module.scss"
 
 export const ListExpense = () => {
 
@@ -9,7 +10,7 @@ export const ListExpense = () => {
     return(
         
         <section>
-            <h2>Financial summary</h2>
+            <h2 className={style.titleFinancial}>Financial summary</h2>
 
             <ul>
                 <CardExpense /> 

@@ -1,5 +1,6 @@
 import { useContext } from "react"
 import { TodoContext } from "../../providers"
+import style from "./style.module.scss"
 
 export const Total = () => {
 
@@ -17,14 +18,14 @@ export const Total = () => {
     }, 0)
     
     return(
-        <>
-            <div>
-                <h3>Value total</h3>
+        <div className={style.containerTotal}>
+            <div className={style.containerValue}>
+                <h3 className={style.titleValue}>Value total</h3>
 
-                <span>{total.toLocaleString("en-US", {style: "currency", currency: "USD"})}</span>
+                <span className={style.price}>{total.toLocaleString("en-US", {style: "currency", currency: "USD"})}</span>
             </div>
 
-            <p>The value refers to the balance.</p>
-        </>
+            <p className={style.paragraphValue}>The value refers to the balance.</p>
+        </div>
     )
 }

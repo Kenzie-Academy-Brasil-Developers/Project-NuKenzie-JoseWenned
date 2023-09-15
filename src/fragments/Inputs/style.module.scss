@@ -1,0 +1,28 @@
+.containerDivInput {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+}
+
+.titleLabel {
+    font-family: var(--font-family);
+    font-weight: var(--font-weight-2);
+    font-size: var(--font-size-1);
+
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.input {
+
+    height: 3.3rem;
+    width: 97%;
+    
+    margin: auto;
+    padding-left: 0.4rem;
+
+    border-radius: .25rem;
+    border: none;
+    background-color: var(--color-gray-2);
+}
