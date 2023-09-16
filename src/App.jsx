@@ -1,11 +1,12 @@
-import { HomePage } from "./pages/HomePage"
+
+import { RoutesMain } from "./routes"
 import "./styles/index.scss"
 
 export const App = () => {
 
   return (
     <main>
-      <HomePage />
+      <RoutesMain />
     </main>
   )
 
