@@ -1,31 +1,15 @@
-import { useContext } from "react"
-import { FormRegister } from "../../components/FormRegister"
-import { Header } from "../../components/Header"
-import { ListExpense } from "../../components/ListExpense"
-import { TodoContext } from "../../providers"
-import { Total } from "../../components/Total"
+import { Link } from "react-router-dom"
 import style from "./style.module.scss"
 
 export const HomePage = () => {
-
-    const {listExpense} = useContext(TodoContext)
-
     return(
-        <>
-            <Header />
+        <header className={style.containerHeader}>
+            <h1 className={style.titleMain}>Nu <span className={style.titleMainSpan}>Kenzie</span></h1>
+            <p className={style.paragraphMain}>Centralize control of your finances</p>
+            <p className={style.paragraphSecondary}>quickly and safely</p>
 
-            <div className={style.container}>
-                <div className={style.containerOne}>
-                    <FormRegister />
-
-                    {listExpense != 0 ? <Total /> : null}
-                </div>
-
-                
-                <div className={style.containerTwo}>
-                    <ListExpense /> 
-                </div>
-            </div>
-        </>
+            <Link to={"/HomeRegister"}><button className={style.buttonStart} type="submit">Start</button></Link>
+        
+        </header>
     )
 }

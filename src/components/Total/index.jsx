@@ -14,7 +14,7 @@ export const Total = () => {
         } else if(current.value === "Exit") {
             return acc - parseFloat(current.price)
         }
-        
+
         return acc
     }, 0)
     

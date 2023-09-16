@@ -1,0 +1,19 @@
+.container {
+    width: 100%;
+    max-width: 75rem;
+
+    @media(min-width: 53.75rem) {
+        display: flex;
+        justify-content: space-between;
+        margin: auto;
+    }
+}
+
+.containerOne {
+    width: 100%;
+}
+
+.containerTwo {
+    width: 100%;
+}
+
