@@ -4,7 +4,7 @@ export const TodoContext = createContext({})
 
 export const ThemeContext = ( { children } ) => {
 
-    const [ listExpense, setListExpense ] = useState(JSON.parse(localStorage.getItem("note")) || [])
+    const [ listExpense, setListExpense ] = useState(JSON.parse(localStorage.getItem("@ADDNOTE")) || [])
     const [ valueSelect, setValueSelect ] = useState("")
     const [ amount, setAmount ] = useState(0)
 
@@ -19,7 +19,7 @@ export const ThemeContext = ( { children } ) => {
         const updateList = listExpense.filter((item) => item.name !== expenseName)
         setListExpense(updateList)
 
-        localStorage.setItem("@ADDNOTE", JSON.stringify(updateList))
+        localStorage.setItem("@ADDNOTE", JSON.stringify(updateList));
     }
 
     return(
@@ -31,6 +31,7 @@ export const ThemeContext = ( { children } ) => {
             valueSelect,
             amount,
             setValueSelect,
+            
 
             }}>
 

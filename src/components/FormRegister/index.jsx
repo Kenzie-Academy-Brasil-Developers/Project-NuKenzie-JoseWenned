@@ -9,7 +9,7 @@ export const FormRegister = () => {
 
     const {register, handleSubmit, reset} = useForm()
 
-    const { AddExpense, setValueSelect } = useContext(TodoContext)
+    const { AddExpense, setValueSelect} = useContext(TodoContext)
 
     const submit = (formData) => {
         
