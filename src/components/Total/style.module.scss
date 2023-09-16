@@ -27,10 +27,24 @@
     font-size: var(--font-size-2);
     font-weight: var(--font-weight-2);
     font-family: var(--font-family);
+
+    margin-left: 0.5rem;
 }
 
 .price {
     font-size: var(--font-size-2);
     font-weight: var(--font-weight-2);
     font-family: var(--font-family);
+
+    color: var(--color-primary-1);
+    margin-right: 0.5rem;
+}
+
+.paragraphValue {
+    font-size: var(--font-size-1);
+    font-weight: var(--font-weight-1);
+    font-family: var(--font-family);
+
+    margin-left: 0.5rem;
+    margin-top: 1.5rem;
 }

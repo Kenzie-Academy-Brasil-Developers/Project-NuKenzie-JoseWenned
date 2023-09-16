@@ -9,6 +9,7 @@ export const Total = () => {
     const total = listExpense.reduce((acc, current) => {   
 
         if(current.value === "Prohibted"){
+            
             return acc + parseFloat(current.price)
         } else if(current.value === "Exit") {
             return acc - parseFloat(current.price)
@@ -20,7 +21,7 @@ export const Total = () => {
     return(
         <div className={style.containerTotal}>
             <div className={style.containerValue}>
-                <h3 className={style.titleValue}>Value total</h3>
+                <h3 className={style.titleValue}>Value total:</h3>
 
                 <span className={style.price}>{total.toLocaleString("en-US", {style: "currency", currency: "USD"})}</span>
             </div>

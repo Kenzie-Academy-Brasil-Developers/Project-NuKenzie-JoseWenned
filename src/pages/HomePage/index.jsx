@@ -4,20 +4,28 @@ import { Header } from "../../components/Header"
 import { ListExpense } from "../../components/ListExpense"
 import { TodoContext } from "../../providers"
 import { Total } from "../../components/Total"
+import style from "./style.module.scss"
 
 export const HomePage = () => {
 
-    const { amount } = useContext(TodoContext)
+    const {listExpense} = useContext(TodoContext)
 
     return(
         <>
             <Header />
 
-            <FormRegister />
+            <div className={style.container}>
+                <div className={style.containerOne}>
+                    <FormRegister />
 
-            <Total />
+                    {listExpense != 0 ? <Total /> : null}
+                </div>
 
-            <ListExpense />
+                
+                <div className={style.containerTwo}>
+                    <ListExpense /> 
+                </div>
+            </div>
         </>
     )
 }

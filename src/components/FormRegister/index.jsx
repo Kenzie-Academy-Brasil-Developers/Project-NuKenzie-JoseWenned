@@ -22,7 +22,6 @@ export const FormRegister = () => {
     return(
         <form className={style.containerForm} onSubmit={handleSubmit(submit)}>
 
-        
             <Input 
                 label= "Description" 
                 type= "name"
@@ -35,7 +34,7 @@ export const FormRegister = () => {
            
             <Input 
                 label= "Value ($)"
-                type= "number"
+                type= "text"
                 placeholder= "1"
                 required
                 {...register("price")}
